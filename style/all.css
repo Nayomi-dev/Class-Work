@@ -4849,6 +4849,9 @@ h1 {
   }
 }
 
+section, nav {
+  margin: 0 auto;
+}
 @media (max-width: 767px) {
   section, nav {
     max-width: 767px;
@@ -4856,7 +4859,12 @@ h1 {
   }
 }
 
+.x {
+  overflow: hidden;
+}
+
 .hero-intro {
+  width: 100%;
   margin-top: -202px;
   margin-left: -80px;
   display: -webkit-box;
@@ -4870,7 +4878,7 @@ h1 {
   }
 }
 .hero-intro .none {
-  width: calc(100vw - 1077px);
+  width: calc(100% - 1077px);
 }
 .hero-intro-text {
   max-width: 1077px;
@@ -4892,7 +4900,7 @@ h1 {
 }
 
 .service {
-  max-width: 1290px;
+  max-width: 1296px;
   margin: 0 auto;
   padding: 80px 0;
 }

@@ -1,6 +1,5 @@
 h1{
     color: $primaryColor;
-    // width: 100px;
 }
 // .withintro{
 //     height: calc(100vh - 90px - 160px);
@@ -13,13 +12,21 @@ h1{
     }  
 }
 section,nav{
+    margin: 0 auto;
     @media(max-width:767px){
         max-width: 767px;
         margin: 0 auto;
     }
 }
+.x{
+    overflow: hidden;
+}
+//疑問：
+//在未加overflow: hidden; 之前，遇到的問題是首頁index頁面，剛載入時由上往下會出現x軸，但由下（footer）往上滑時，Ｘ軸就會消失。
+//在作業討論詢問後，有人解答是因為aos的transform問題，所以使用overflow解決，不知道助教還有無其他的解決辦法，如果有再麻煩助教分享給我～謝謝
 
 .hero-intro{
+    width: 100%;
     margin-top: -202px;
     margin-left: -80px;
     display: flex;
@@ -29,9 +36,10 @@ section,nav{
         padding: 0 12px;
     }
     .none{
-        width: calc(100vw - 1077px);
+        width: calc(100% - 1077px);
         // background: darkblue;
     }
+    //使用vw會出現x軸，通常寬度使用100%，盡量不要使用vw，通常使用vh
     &-text{
         max-width: 1077px;
         background-color: #fff;
@@ -54,7 +62,7 @@ section,nav{
 }
 
 .service{
-    max-width: 1290px;
+    max-width: 1296px;
     margin: 0 auto;
     padding: 80px 0;
     @media(max-width:767px){
@@ -260,7 +268,7 @@ section,nav{
         margin-top: 16px;
     }
     &-group{
-        // width: 1290px;
+        // width: 1296px;
         display: flex;
         // justify-content: space-between;
         flex-wrap: wrap;
