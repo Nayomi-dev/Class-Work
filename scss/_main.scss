@@ -29,9 +29,10 @@ section,nav{
         padding: 0 12px;
     }
     .none{
-        width: calc(100vw - 1077px);
+        width: calc(100% - 1077px);
         // background: darkblue;
     }
+    //使用vw會出現x軸，通常寬度使用100%，盡量不要使用vw，通常使用vh
     &-text{
         max-width: 1077px;
         background-color: #fff;
@@ -54,7 +55,7 @@ section,nav{
 }
 
 .service{
-    max-width: 1290px;
+    max-width: 1296px;
     margin: 0 auto;
     padding: 80px 0;
     @media(max-width:767px){
@@ -260,7 +261,7 @@ section,nav{
         margin-top: 16px;
     }
     &-group{
-        // width: 1290px;
+        // width: 1296px;
         display: flex;
         // justify-content: space-between;
         flex-wrap: wrap;
