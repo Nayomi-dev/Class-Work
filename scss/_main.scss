@@ -18,13 +18,25 @@ section,nav{
         margin: 0 auto;
     }
 }
-// .x{
-    // overflow: hidden;
-// }
-//疑問：
-//在未加overflow: hidden; 之前，遇到的問題是首頁index頁面，剛載入時由上往下會出現x軸，但由下（footer）往上滑時，Ｘ軸就會消失。
-//在作業討論詢問後，有人解答是因為aos的transform問題，所以使用overflow解決，不知道助教還有無其他的解決辦法，如果有再麻煩助教分享給我～謝謝
-//但是我改完後還是會有
+.hidden{
+    overflow: hidden;
+}
+
+//沒有用aos，就沒有x軸 
+   
+// ？？疑問
+// 您好，我想請問：為什麼我一加入aos，畫面就會出現x軸？有在作業討論區發問，有同學說用aos的地方用overflow，我試了但還是沒辦法避免這個問題。不知道是為什麼？不知道是不是我哪裡有搞錯的地方
+
+// 遇到的問題是首頁index頁面，剛載入時由上往下會出現x軸，但由下（footer）往上滑時，Ｘ軸就會消失。
+
+// 在作業討論詢問後，有人解答是因為aos的transform問題，可以使用overflow解決，但我改完後還是會出現，然後滑鼠拖曳到成功案例那四個人的時候又會消失x軸，只有把aos全拿掉才能解決，不曉得該怎麼辦？
+
+// 另外，我有附上兩個一個有aos、一個aos+hidden的版本在repo，
+// 檔名分別是index2.html（加入aos版本），和index3（加入aos搭配overflow:hidden的版本）
+// 希望助教可以撥冗回應，因為未來也很想使用aos在專案中，所以很想弄懂，怕之後遇到不知道怎麼解決，謝謝您Ｔ0Ｔ
+
+// 另外還想請問閱讀內文和啟動訂閱這兩個按鈕html用a標籤比較好還是button? 
+// 謝謝您
 
 .hero-intro{
     width: 100%;
@@ -50,7 +62,7 @@ section,nav{
            
         }
             
-        }
+    }
     
     p{
         font-weight: $fontweight-S;

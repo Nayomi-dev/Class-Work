@@ -21,23 +21,7 @@
 </script>
 </head>
 <body>
-    <!-- 沒有用aos，就沒有x軸 -->
-   
-    <!-- ？？疑問
-    您好，我想請問：為什麼我一加入aos，畫面就會出現x軸？有在作業討論區發問，有同學說用aos的地方用overflow，我試了但還是沒辦法避免這個問題。不知道是為什麼？不知道是不是我哪裡有搞錯的地方
-
-    遇到的問題是首頁index頁面，剛載入時由上往下會出現x軸，但由下（footer）往上滑時，Ｘ軸就會消失。
-
-    在作業討論詢問後，有人解答是因為aos的transform問題，可以使用overflow解決，但我改完後還是會出現，然後滑鼠拖曳到成功案例那四個人的時候又會消失x軸，只有把aos全拿掉才能解決，不曉得該怎麼辦？
-
-    另外，我有附上兩個一個有aos、一個aos+hidden的版本在repo，
-    檔名分別是index2.html（加入aos版本），和index3（加入aos搭配overflow:hidden的版本）
-
-    希望助教可以撥冗回應，因為未來也很想使用aos在專案中，所以很想弄懂，怕之後遇到不知道怎麼解決，謝謝您Ｔ0Ｔ
-    -->
-    <!--
-    另外還想請問閱讀內文和啟動訂閱這兩個按鈕html用a標籤比較好還是button? 
-    謝謝您～ -->
+    <!-- 用aos+hidden，會出現x軸-->
     <header>
         <ul class="nav">
             <li>
@@ -48,55 +32,57 @@
             </li>
         </ul>
     </header>
-    <section class="hero Fullversion2 ">
-
-            <div class="hero-pic"></div>
-            <div class="hero-text">
+    <section class="hero Fullversion2">
+            <div data-aos="fade-up" class="hero-pic hidden"></div>
+            <div data-aos="fade-up"  class="hero-text  hidden">
                 <h1>Alyse Wang</h1>
                 <h3>前端工程師 & 職涯諮詢師</h3>
             </div>      
     </section>
-    <section class="intro-group">
-        <div class="hero-intro">
+    <section class="intro-group hidden">
+        <div data-aos="fade-up" class="hero-intro  hidden">
             <div class="none"></div>
             <div class="hero-intro-text">
-                <p>嗨，我是Alyse，一名深耕前端技術的工程師。</p>
-            
-                <p>擅長 React、Vue 等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！</p>
-            <div class="icon-group">        
-                <a href="#" class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-                </svg></a>
-                <a href="" class="icon pocast-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
-                        <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8"/>
-                      </svg>
-                </a>   
-                <a href="#" class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                </svg></a>
-                <a href="#" class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                      </svg>
-                </a>
-                <a href="#" class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                      </svg>
-                </a>
+                <p>
+                    嗨，我是AlyseW，一名深耕前端技術的工程師。
+                </p>          
+                <p>
+                    擅長 React、Vue 等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！
+                </p>
+                <!-- <div class="icon-group">         -->
+                    <a href="#" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                    </svg></a>
+                    <a href="" class="icon pocast-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+                            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg></a>
+                    <a href="" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                    </a>
+                    <a href="" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                    </a>
+                <!-- </div>     -->
             </div>
         </div>
     </section>
     
-    <section class="service">
-        <h2 class=" ">專業服務與方案</h2>
+    <section class="service hidden">
+        <h2 data-aos="fade-up" class="hidden">專業服務與方案</h2>
         <ul>
-            <li class="servicelist">
-                <div class="service-pic"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo.png?raw=true" alt="服務情境照">
-                </div>
+            <li data-aos="fade-up-right" class="servicelist hidden">
+                <div class="service-pic"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo.png?raw=true" alt="服務情境照"></div>
                 <div class="service-intro intro-right">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
@@ -105,7 +91,7 @@
                     <p>履歷是打開機會之門的第一步。讓我協助你突顯專業技術與核心能力，並透過簡短模擬面試為你加分，讓面試官第一眼就被你吸引。</p>
                 </div>
             </li>
-            <li class="servicelist servicelist-left">
+            <li data-aos="fade-up-left" class="servicelist servicelist-left hidden">
                 <div class="service-pic"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo2.png?raw=true" alt="服務情境照"></div>
                 <div class="service-intro intro-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
@@ -116,7 +102,7 @@
                 </div>
 
             </li>
-            <li class="servicelist">
+            <li data-aos="fade-up-right" class="servicelist hidden">
                 <div class="service-pic"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo3.png?raw=true" alt="服務情境照"></div>
                 <div class="service-intro intro-right">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
@@ -126,7 +112,7 @@
                     <p>想打造高效能、具美感的網站？我提供從需求訪談到架構實作的一站式服務，讓你的品牌與產品在線上脫穎而出。</p>
                 </div>
             </li>
-            <li class="servicelist servicelist-left">
+            <li data-aos="fade-up-left" class="servicelist servicelist-left hidden ">
                 <div class="service-pic"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo4.png?raw=true" alt="服務情境照"></div>
                 <div class="service-intro intro-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
@@ -137,7 +123,7 @@
                 </div>
 
             </li>        
-            <a href="#" class=" ">
+            <a data-aos="fade-up-left" href="#" class="hidden ">
                 <h3 class="hvr-forward">    
                     聯繫我，取得更多資訊！
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle hvr-forward" viewBox="0 0 16 16">
@@ -146,11 +132,16 @@
                 
                 </h3>
             </a>
-        </ul>
-    </section>
+            
 
-    <section class="bloglist">   
-        <h2 class=" ">部落格精選</h2>
+            
+
+        </ul>
+
+    </section>
+    <section class="bloglist hidden">
+        
+        <h2 data-aos="fade-up" class="hidden">部落格精選</h2>
         <div class="bloglist-turn container ">
             <a href="#" class="btn-next disappear">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
@@ -158,7 +149,7 @@
                   </svg>
             </a>
             <ul class="card-list ">
-                <li class="card ">
+                <li  class="card ">
                     <div class="card-pic">
                             <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog/photo10.png?raw=true" alt="文章圖片">
                     </div>
@@ -207,6 +198,8 @@
                     <a class="btn hvr-grow" href="article.html">閱讀內文</a>
                 </div>
                 </li>
+
+
             </ul>
 
             <a href="#" class="btn-next disappear">
@@ -215,7 +208,8 @@
                   </svg>
             </a>
         </div>
-        <div class="ooo">    
+        <div class="ooo">
+            
             <a href="#" class="open">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                     <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
@@ -231,23 +225,23 @@
     </section>
     <section class="case container">
         <div class="case-title toblock">
-            <h2 class=" ">職涯諮詢</h2>
-            <h2 class=" ">成功案例</h2>
+            <h2 data-aos="fade-up" class=" hidden">職涯諮詢</h2>
+            <h2 data-aos="fade-up" class="  hidden ">成功案例</h2>
         </div>
         <div class="case-banner">
 
-            <div  class="case-pic">
+            <div data-aos="fade-up" class="case-pic  hidden">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo8.png?raw=true" alt="">
                 
             </div>
             <div class="case-intro">
-                <div  class="case-intro-head">
+                <div data-aos="fade-up-right" class="case-intro-head hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
                       </svg>
                     <p>在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效突破原有的舒適圈。</p>
                 </div>
-                <div  class="case-intro-foot">
+                <div data-aos="fade-up-left" class="case-intro-foot hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
                       </svg>
@@ -256,8 +250,8 @@
                 </div>
             </div>
         </div>
-        <ul  class="case-group">
-            <li  class="case-group-list">
+        <ul data-aos="fade-up" class="case-group">
+            <li data-aos="fade-up" class="case-group-list">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/people.png?raw=true" alt="學員照片">
                 <h4>無經驗到前端工程師 Offer</h4>
                 <ul>
@@ -274,7 +268,7 @@
                 </ul>
                 <a class="btn hvr-grow" href="#">前往聆聽Podcast</a>
             </li>
-            <li  class="case-group-list">
+            <li data-aos="fade-up" class="case-group-list">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/people2.png?raw=true" alt="學員照片">
                 <h4>轉職迷茫到明確學習規劃</h4>
                 <ul>
@@ -291,7 +285,7 @@
                 </ul>
                 <a class="btn hvr-grow" href="#">前往聆聽Podcast</a>
             </li>
-            <li  class="case-group-list">
+            <li data-aos="fade-up" class="case-group-list">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/people4.png?raw=true" alt="學員照片">
                 <h4>面試緊張到從容應對</h4>
                 <ul>
@@ -308,7 +302,7 @@
                 </ul>
                 <a class="btn hvr-grow" href="#">前往聆聽Podcast</a>
             </li>
-            <li  class="case-group-list">
+            <li data-aos="fade-up" class="case-group-list">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/people3.png?raw=true" alt="學員照片">
                 <h4>實戰經驗模擬</h4>
                 <ul>
@@ -330,10 +324,10 @@
         </ul>
     </section>
     <section class="subscript">
-        <div class="subscript-pic">
+        <div data-aos="fade-up-right" class="subscript-pic hidden">
             <!-- <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo9.png?raw=true" alt="訂閱形象圖"> -->
         </div>
-        <div class="subscript-bg">
+        <div data-aos="fade-up-left" class="subscript-bg hidden">
             <div class="subscript-sheet">
                 <h2>訂閱電子報</h2>
                 <p>立即訂閱，搶先掌握<a href="">前端 x 職涯</a>的獨家資訊！</p>
@@ -348,10 +342,10 @@
         </div>
     </section>
     <section class="contactme">
-        <h2 >與我聯繫</h2>
+        <h2 data-aos="fade-up">與我聯繫</h2>
 
          <ul class="contactme-list">
-            <li  class="contactme-list-link hvr-sweep-to-right">
+            <li data-aos="fade-up" class="contactme-list-link hvr-sweep-to-right">
                 <a href="#"class="contactme-list-link-icon">
                     <p class="icon-text">
                         <span class="contact-email">alysewang@hexschool.com</span> 
@@ -364,7 +358,7 @@
                     </span> 
                 </a>    
             </li>
-            <li  class="contactme-list-link hvr-sweep-to-right">
+            <li data-aos="fade-up" class="contactme-list-link hvr-sweep-to-right">
                 <a href="#"class="contactme-list-link-icon">
                     <p class="icon-text">
                         <span class="contactme-icon">
@@ -381,7 +375,7 @@
                     
                 </a>
             </li>
-            <li  class="contactme-list-link hvr-sweep-to-right">
+            <li data-aos="fade-up" class="contactme-list-link hvr-sweep-to-right">
                 <a href="#"class="contactme-list-link-icon">
                     <p class="icon-text">
                         <span class="contactme-icon">
@@ -399,7 +393,7 @@
                     
                 </a>
             </li>
-            <li  class="contactme-list-link hvr-sweep-to-right">
+            <li data-aos="fade-up" class="contactme-list-link hvr-sweep-to-right">
                 <a href="#"class="contactme-list-link-icon">
                     <p class="icon-text">
                         <span class="contactme-icon">
@@ -417,7 +411,7 @@
                     
                 </a>
             </li>
-            <li  class="contactme-list-link hvr-sweep-to-right">
+            <li data-aos="fade-up" class="contactme-list-link hvr-sweep-to-right">
                 <a href="#"class="contactme-list-link-icon">
                     <p class="icon-text">
                         <span class="contactme-icon">
@@ -435,7 +429,7 @@
                     
                 </a>
             </li>
-            <li  class="contactme-list-link hvr-sweep-to-right">
+            <li data-aos="fade-up" class="contactme-list-link hvr-sweep-to-right">
                 <a href="#"class="contactme-list-link-icon">
                     <p class="icon-text">
                         <span class="contactme-icon">
@@ -467,7 +461,7 @@
  AOS.init(
     {
         offset:150,
-        // delay:50,
+        delay:50,
         duration:800,
     }
  );
