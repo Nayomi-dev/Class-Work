@@ -81,6 +81,11 @@ h1 {
   font-weight: 900;
   font-size: 120px;
 }
+@media (max-width: 992px) {
+  h1 {
+    font-size: 80px;
+  }
+}
 @media (max-width: 767px) {
   h1 {
     font-size: 56px;
@@ -115,13 +120,6 @@ h5 {
 .container {
   max-width: 1296px;
   margin: 0 auto;
-  padding: 0 12px;
-}
-@media (max-width: 375px) {
-  .container {
-    max-width: 375px;
-    padding: 0 12px;
-  }
 }
 
 .twoline {
@@ -4866,7 +4864,7 @@ section, nav {
 .hero-intro {
   width: 100%;
   margin-top: -202px;
-  margin-left: -80px;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4900,8 +4898,6 @@ section, nav {
 }
 
 .service {
-  max-width: 1296px;
-  margin: 0 auto;
   padding: 80px 0;
 }
 @media (max-width: 767px) {
@@ -5009,8 +5005,6 @@ section, nav {
 }
 
 .bloglist {
-  max-width: 1296px;
-  margin: 0 auto;
   padding: 80px 0;
   border-top: 1px solid #000;
 }
@@ -5066,6 +5060,12 @@ section, nav {
 .case {
   border-top: 1px solid #000;
   padding: 80px 12px;
+}
+@media (max-width: 375px) {
+  .case {
+    max-width: 375px;
+    padding: 0 12px;
+  }
 }
 .case-title {
   display: -webkit-box;
@@ -5278,8 +5278,6 @@ section, nav {
 }
 
 .contactme {
-  max-width: 1296px;
-  margin: 0 auto;
   padding: 80px 0;
 }
 @media (max-width: 767px) {
@@ -5386,7 +5384,7 @@ section, nav {
 }
 
 .serch-group {
-  width: 416px;
+  width: 75%;
   border: 1px solid #000;
   padding: 16px;
   border-radius: 40px;
@@ -5403,6 +5401,16 @@ section, nav {
   max-width: 318px;
   padding-right: 32px;
   border: none;
+}
+
+.blogmain {
+  padding: 0 12px;
+}
+@media (max-width: 375px) {
+  .blogmain {
+    max-width: 375px;
+    padding: 0 12px;
+  }
 }
 
 .card-list {
@@ -5473,6 +5481,24 @@ section, nav {
   .card-list .card-list .card {
     width: 100%;
   }
+}
+
+.subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subtitle-item {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 4px;
+  color: #0027D5;
+  padding-right: 4px;
 }
 
 .choose-page {
@@ -5626,9 +5652,12 @@ article ol li {
   padding: 8px 16px;
   border: solid 1px #4B4B4B;
   border-radius: 60px;
-}
-.page-btn .article-btn a {
   color: #4B4B4B;
+}
+.page-btn .article-btn:hover {
+  color: white;
+  background: #0027D5;
+  border: solid 1px #0027D5;
 }
 
 .contact {
@@ -5637,6 +5666,9 @@ article ol li {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 80px;
   padding: 80px;
   border-top: 1px solid #6C757D;
@@ -5652,7 +5684,17 @@ article ol li {
 }
 .icon {
   width: 24px;
+  height: 24px;
   gap: 4px;
+  padding: 4px;
+}
+.icon:hover {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  background: #0027D5;
+  color: white;
+  border-radius: 4px;
 }
 .icon .bi-broadcast-pin {
   background-color: #0027D5;

@@ -75,10 +75,11 @@ img{
 h1{
     font-weight: $fontweight-B;
     font-size: $fontsize-XXXL;
+    @media(max-width:992px){
+        font-size: $fontsize-XXXL - 40;
+    }
     @media(max-width:767px){
-        
         font-size: $fontsize-XXXL-mb;
-        
     }
 }
 
@@ -112,11 +113,8 @@ h5{
 .container{
     max-width: 1296px;
     margin: 0 auto;
-    padding: 0 12px;
-    @media(max-width:375px){
-        max-width: 375px;
-        padding: 0 12px;
-    }
+
+
 }
 
 .twoline{

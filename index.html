@@ -54,10 +54,9 @@
         </ul>
     </header>
     <section class="hero Fullversion2 ">
-
             <div class="hero-pic"></div>
             <div class="hero-text">
-                <h1>Alyse Wang</h1>
+                <h1 class="title">Alyse Wang</h1>
                 <h3>前端工程師 & 職涯諮詢師</h3>
             </div>      
     </section>
@@ -96,7 +95,7 @@
         </div>
     </section>
     
-    <section class="service">
+    <section class="service container">
         <h2 class=" ">專業服務與方案</h2>
         <ul>
             <li class="servicelist">
@@ -154,7 +153,7 @@
         </ul>
     </section>
 
-    <section class="bloglist">   
+    <section class="bloglist container">   
         <h2 class=" ">部落格精選</h2>
         <div class="bloglist-turn container ">
             <a href="#" class="btn-next disappear">
@@ -169,7 +168,14 @@
                     </div>
                     <div class="card-text">
                         <time> 2024/10/21</time>
-                        <h4>前端開發 x 職涯成長 <span class="hashtag animate__heartBeat">最新文章</span></h4>
+                        <ul class="subtitle">
+                            <li class="subtitle-item">
+                                <a>前端開發 x 職涯成長</a>   
+                            </li>
+                            <li class="subtitle-item">
+                                <span class="hashtag animate__heartBeat">最新文章</span>
+                            </li>                                    
+                        </ul>
                         <h3 class="article-title">自學前端不用怕：從零開始的三大關鍵</h3>
                         <p>嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」 其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！</p>
                         <a class="btn hvr-grow" href="article.html">閱讀內文</a>
@@ -180,16 +186,18 @@
                         <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog/photo4.png?raw=true" alt="文章圖片">
                     </div>
                     <div class="card-text">
-                        <time> 2024/07/08</time>
-                        
-                        <ul>
-                            <li class="subtitle">
-                                <a href="#"><h4>#面試準備  </h4></a>   
-                                <a href="#"><h4>##工程師求職</h4></a>   
-                                <span class="hashtag animate__heartBeat">人氣文章</span>
+                        <time> 2024/07/08</time>                        
+                        <ul class="subtitle">
+                            <li class="subtitle-item">
+                                <a href="#">#面試準備</a>
                             </li>
-                        </ul> 
-                        
+                            <li class="subtitle-item">
+                                <a href="#">#工程師求職</a>   
+                            </li>
+                            <li class="subtitle-item">
+                                <span class="hashtag animate__heartBeat">人氣文章</span>
+                            </li>       
+                        </ul>                     
                         <h3 class="article-title">前端面試不再慌：破解常見提問的三大策略</h3>
                         <p>面試前端工程師時，你或許擔心被問到各種刁鑽的技術題目，或是擔憂無法在短時間內展現實力。其實，許多面試官關注的重點並不僅是程式碼本身，更包含問題解決的流程與溝通能力。這篇文章將分享我在面試過程中常見的三大難題，以及如何以更具條理的方式回應，讓你在面試場合中脫穎而出。</p>
                         <a class="btn hvr-grow" href="article.html">閱讀內文</a>
@@ -201,10 +209,12 @@
                 </div>
                 <div class="card-text">
                     <time> 2024/09/03</time>
-                    <ul>
-                        <li class="subtitle">
-                            <a href="#"><h4>#CSS設計 </h4></a>   
-                            <a href="#"><h4>#視覺體驗</h4></a>   
+                    <ul class="subtitle">
+                        <li class="subtitle-item">
+                            <a href="#">#CSS設計 </a>   
+                        </li>
+                        <li class="subtitle-item">
+                            <a href="#">#視覺體驗</a>   
                         </li>
                     </ul>
                     <h3 class="article-title">CSS 魔法大揭密：排版與設計的三大關鍵技巧</h3>
@@ -213,7 +223,6 @@
                 </div>
                 </li>
             </ul>
-
             <a href="#" class="btn-next disappear">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                     <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
@@ -231,7 +240,6 @@
                     <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
                 </svg>
             </a>
-
         </div>
     </section>
     <section class="case container">
@@ -240,10 +248,8 @@
             <h2 class=" ">成功案例</h2>
         </div>
         <div class="case-banner">
-
             <div  class="case-pic">
-                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo8.png?raw=true" alt="">
-                
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo8.png?raw=true" alt="">    
             </div>
             <div class="case-intro">
                 <div  class="case-intro-head">
@@ -334,7 +340,7 @@
 
         </ul>
     </section>
-    <section class="subscript">
+    <section class="subscript ">
         <div class="subscript-pic">
             <!-- <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/photo9.png?raw=true" alt="訂閱形象圖"> -->
         </div>
@@ -352,7 +358,7 @@
             </div>
         </div>
     </section>
-    <section class="contactme">
+    <section class="contactme container">
         <h2 >與我聯繫</h2>
 
          <ul class="contactme-list">
